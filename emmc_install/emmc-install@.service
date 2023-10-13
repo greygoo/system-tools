@@ -1,0 +1,19 @@
+[Unit]
+Description=Copy system to emmc
+After=local-fs.target
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/emmc_install.sh
+RemainAfterExit=true
+Type=idle
+StandardInput=tty
+StandardOutput=tty
+UtmpIdentifier=%I
+TTYPath=/dev/%I
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+
+[Install]
+WantedBy=multi-user.target

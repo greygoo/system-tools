@@ -5,7 +5,7 @@ if [ $(id -u) -ne 0 ]; then
   exit 1
 fi
 
-/usr/sbin/nand-sata-install
+/usr/local/bin/nand-sata-autoinstall
 
 rmdir /tmp/armbian
 mkdir /tmp/armbian

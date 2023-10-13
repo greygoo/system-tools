@@ -23,7 +23,8 @@
 [[ -f /usr/lib/u-boot/platform_install.sh ]] && source /usr/lib/u-boot/platform_install.sh
 
 # ORIGINAL_SCRIPT_NAME: Must be either armbian-install or nand-sata-install
-ORIGINAL_SCRIPT_NAME=$(basename $0)
+#ORIGINAL_SCRIPT_NAME=$(basename $0)
+ORIGINAL_SCRIPT_NAME=nand-sata-install
 # script configuration - derive from ORIGINAL_SCRIPT_NAME
 CWD="/usr/lib/${ORIGINAL_SCRIPT_NAME}"
 EX_LIST="${CWD}/exclude.txt"
